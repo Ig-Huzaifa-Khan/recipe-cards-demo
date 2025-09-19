@@ -41,6 +41,7 @@ export const sampleRecipes = [
     difficulty: "Easy",
     description: "Fluffy breakfast treat",
     image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=400&h=300&fit=crop&q=80",
+    ingredients: ["Flour", "Milk", "Eggs", "Sugar", "Baking Powder", "Butter"],
     dietaryTags: ["Vegetarian"]
   }
 ];
