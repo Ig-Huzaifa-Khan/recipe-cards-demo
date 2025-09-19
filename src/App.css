@@ -1,0 +1,168 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.app h1 {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-image, .recipe-placeholder {
+  width: 100%;
+  height: 180px;
+}
+
+.recipe-image {
+  object-fit: cover;
+}
+
+.recipe-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.recipe-content {
+  padding: 1.25rem;
+}
+
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.recipe-time {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.recipe-difficulty {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.difficulty-easy { color: #10b981; }
+.difficulty-medium { color: #f59e0b; }
+.difficulty-hard { color: #ef4444; }
+
+.recipe-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.dietary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.dietary-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.dietary-tag.vegan {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.dietary-tag.vegetarian {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.dietary-tag.gluten-free {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.ingredients {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+}
+
+.ingredients h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.ingredients-list {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .app h1 {
+    font-size: 2rem;
+  }
+  
+  .recipe-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .recipe-content {
+    padding: 1rem;
+  }
+}
